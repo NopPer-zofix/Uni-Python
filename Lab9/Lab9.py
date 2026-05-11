@@ -11,14 +11,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.show()
-        self.LabelAnswer.setText("Calculating...")
-        self.ButtonPush.clicked.connect(self.calc_result)
-        self.ButtonExit.clicked.connect(self.close_UI)
+        self.Result.setText("Calculating...")
+        self.action.clicked.connect(self.calc_result)
+        self.exit.clicked.connect(self.close_UI)
 
     def calc_result(self):
-        # ADD CODE HERE TO CALCULATE THE RESULT
-        result = 0
-        self.LabelAnswer.setText(str(result))
+        num1 = int(self.num1.text())
+        num2 = int(self.num2.text())
+        result = num1 + num2
+        self.Result.setText(str(result))
 
     # Exit Menu Item
     def close_UI(self):
