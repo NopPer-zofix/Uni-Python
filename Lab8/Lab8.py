@@ -11,19 +11,19 @@ from sklearn.neighbors import KNeighborsClassifier
 df = pd.read_csv(r'D:\snake\Uni\Lab8\fraud.csv')
 
 
-# for i in range(5, 9):
-#     for j in range(5, 9):
-#         if i == j:
-#             continue
-#         one = 'V' + str(i)
-#         two = 'V' + str(j)
-#         x = np.array(df[one].tolist())
-#         y = np.array(df[two].tolist())
-#         plt.figure()
-#         plt.scatter(x, y,c = 'cyan', s=10)
-#         plt.title(one + " VS " + two)
+for i in range(5, 9):
+    for j in range(5, 9):
+        if i == j:
+            continue
+        one = 'V' + str(i)
+        two = 'V' + str(j)
+        x = np.array(df[one].tolist())
+        y = np.array(df[two].tolist())
+        plt.figure()
+        plt.scatter(x, y,c = 'cyan', s=10)
+        plt.title(one + " VS " + two)
         
-#         plt.show()
+        plt.show()
 
 
 
